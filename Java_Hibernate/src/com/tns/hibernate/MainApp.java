@@ -5,11 +5,11 @@ import org.hibernate.Session;
 public class MainApp {
 
 	public static void main(String[] args) {
-		Session objsession = HibernateDBConnect.getSessionFactory().openSession();
+		Session objsession = HlbernateDBConnect.getSessionFactory().openSession();
 
 		// CRUD operation
 		// Step 1: Create
-		Users user1 = new Users("Yunus", "mkyounu24", "Yunus", "K");
+		Users user1 = new Users(1,"asiya", "siya@32", "asiya", "banu");
 		objsession.beginTransaction();
 		objsession.save(user1);
 		objsession.getTransaction().commit();

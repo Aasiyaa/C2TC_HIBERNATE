@@ -1,34 +1,34 @@
 package com.tns.hibernate;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "users")
-public class Users {
+@Table(name ="student_data")
+public class Users 
+{
 	@Id
-	@Column(name = "userid")
+	@Column(name="user_id")
 	int userid;
-
-	@Column(name = "username")
+	
+	@Column(name="user_name")
 	String username;
-
-	@Column(name = "password")
+	
+	@Column(name="password")
 	String password;
-
-	@Column(name = "firstname")
+	
+	@Column(name="first_name")
 	String firstname;
-
-	@Column(name = "lastname")
+	
+	@Column(name="last_name")
 	String lastname;
 
 	public int getUserid() {
 		return userid;
 	}
 
-	 public String getUsername() {
+	public String getUsername() {
 		return username;
 	}
 
@@ -60,22 +60,19 @@ public class Users {
 		this.lastname = lastname;
 	}
 
-	public Users() {
-
-	}
-
-	public Users(String username, String password, String firstname, String lastname) {
-
+	public Users(int userid, String username, String password, String firstname, String lastname) {
+		super();
+		this.userid = userid;
 		this.username = username;
 		this.password = password;
 		this.firstname = firstname;
 		this.lastname = lastname;
 	}
 
-	@Override
-	public String toString() {
-		return "Users [userid=" + userid + ", username=" + username + ", password=" + password + ", firstname="
-				+ firstname + ", lastname=" + lastname + "]";
+	public Users() {
+		super();
 	}
-
+	
+	 
+	
 }
