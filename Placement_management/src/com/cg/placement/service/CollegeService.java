@@ -10,8 +10,8 @@ public interface CollegeService {
 	
 	public College addCollege(College clg);
 	public College updateCollege(College clg);
-	public College searchCollege(long id);
-	public boolean deleteCollege(long id);
+	public College searchCollege(int id);
+	public boolean deleteCollege(int id);
 	
 	public boolean schedulePlacement(Placement placement);
 	
