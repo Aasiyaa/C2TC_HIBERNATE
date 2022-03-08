@@ -5,11 +5,11 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name ="student_data")
+@Table(name ="student_data")//pass the name of the table 
 public class Users 
 {
 	@Id
-	@Column(name="user_id")
+	@Column(name="user_id")//its referring to the database column name user_id//case sensitive
 	int userid;
 	
 	@Column(name="user_name")
@@ -71,6 +71,12 @@ public class Users
 
 	public Users() {
 		super();
+	}
+
+	@Override
+	public String toString() {
+		return "Users [userid=" + userid + ", username=" + username + ", password=" + password + ", firstname="
+				+ firstname + ", lastname=" + lastname + "]";
 	}
 	
 	 
